@@ -2,6 +2,8 @@ package com.ymj;
 
 import org.elasticsearch.action.DocWriteResponse;
 import org.elasticsearch.action.admin.indices.delete.DeleteIndexRequest;
+import org.elasticsearch.action.get.GetRequest;
+import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.action.support.master.AcknowledgedResponse;
@@ -168,6 +170,21 @@ public class TestIndex {
         IndexResponse indexResponse = client.index(indexRequest, RequestOptions.DEFAULT);
         DocWriteResponse.Result result = indexResponse.getResult();
         System.out.println("======================" + result + "======================");
+    }
+
+
+    /**
+     * 查询文档
+     * @throws IOException
+     */
+    @Test
+    public void testGetDoc() throws IOException {
+        // 查询请求对象
+        GetRequest getRequest = new GetRequest("elasticsearch_test", "2");
+        GetResponse getResponse = client.get(getRequest, RequestOptions.DEFAULT);
+        // 得到文档的内容
+        Map<String, Object> sourceAsMap = getResponse.getSourceAsMap();
+        System.out.println(sourceAsMap);
     }
 }
 
