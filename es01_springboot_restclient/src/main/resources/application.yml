@@ -1,1 +1,4 @@
 
+lagouelasticsearch:
+  elasticsearch:
+    hostlist: 192.168.1.241:9200
