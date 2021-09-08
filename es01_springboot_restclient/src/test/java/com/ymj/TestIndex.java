@@ -248,6 +248,7 @@ public class TestIndex {
             System.out.println("======================" + name + "======================");
             System.out.println("======================" + studymodel + "======================");
             System.out.println("======================" + description + "======================");
+            System.out.println("======================" + price + "======================");
         }
 
 
