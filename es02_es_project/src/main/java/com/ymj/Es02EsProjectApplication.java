@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Es02EsProjectApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(Es02EsProjectApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(Es02EsProjectApplication.class, args);
+    }
 
 }
