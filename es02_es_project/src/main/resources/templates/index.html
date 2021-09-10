@@ -93,6 +93,7 @@
         methods: {
             searchPosition(){
                 var keyword = this.keyword;
+
                 axios.get('http://localhost:8083/search/'+ keyword + '/1/2').then(response =>{
                     this.results = response.data;
                 });
